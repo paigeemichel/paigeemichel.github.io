@@ -1,0 +1,20 @@
+body {
+    background-color: #8CAE68;
+}
+
+p { color:#114355;
+    font-size: 1.5em;
+    font-family: "Warbler", regular;
+}
+
+p {color: #E27396;
+padding: 15x;
+}
+
+.myhello {
+    font-family: "Envelove", sans-serif;
+    font-size: 7.5em;
+    text-align: center
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 400px;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .expand-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer; }
+
+    button {
+    height: 20px;
+    width: 20px;
+    border-radius: 20%; ;
+    border:2px solid #ccc;
+    background-color: pink;
+  }
+  .card-content {
+    margin-top: 10px;
+    text-align: center;}
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+    <div class="card">
+    <div class="card-header">
+    <h3>Community Garden Project</h3>
+    <button class="expand-btn" aria-label="Expand card">+</button>
+  </div>
+  <div class="card-content">
+    <p class="summary">Join neighbors in creating a shared growing space...</p>
+    <div class="details hidden">
+      <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+      <p>Contact: garden@community.org</p>
+    </div>
+    </div>
+    <script>
+        let info =false;
+        
+        const expandBtn = document.querySelector('.expand-btn');
+        const details = document.querySelector('.details'); 
+
+        expandBtn.addEventListener('click', function() {
+            if(details.style.display === 'none') details.style.display = '';
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+
+        function showInfo() {
+            console.log('button clicked'); //put a console log to test if button works//
+            alert('this is an alert');
+            if (info == false){
+                details.style.display = 'flex';
+                info = true;
+            }
+            else {  
+                details.style.display = 'none';
+                info = false;
+            }
+    </script>
+</body>
+</html>
