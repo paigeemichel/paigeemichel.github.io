@@ -1,0 +1,52 @@
+.gallery-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav sidebar"
+        "main sidebar";
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+
+}
+
+.gallery-header {
+    grid-area: header; 
+    background: lightblue;
+    padding: 10px;}
+
+
+.gallery-nav { 
+    grid-area: nav; 
+    background: pink;
+    padding: 10px;
+}
+
+
+.gallery-grid {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:1rem;
+}
+
+.gallery-sidebar { 
+    grid-area: sidebar; 
+    background: lightgreen;
+    padding: 10px;
+}
+
+.photo-card {
+    height: 200px; 
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.featured {
+    grid-column: span 2;
+    height: 300px; 
+    background: blue;
+    color: white;
+}
