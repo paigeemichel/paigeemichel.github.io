@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="week-6-crafting.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="nav-brand">Boulder Crafting Community</div>
+
+  <!--For changing how navigation is shown on smaller screens-->
+  <button class="nav-toggle" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!--Links within our navigation-->
+  <ul class="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<!--put content here for the main content in my page like a grid-->
+  <div class="event-grid">
+  <section class="section1 event">
+    <h2>Event here</h2>
+    <p> Details to come</p>
+    </section>
+
+
+  <section class="section2 event">
+    <h2>Resources here</h2>
+    <p> Details to come</p>
+    </section>
+
+
+  <section class="section3 event">
+    <h2>Contact info here</h2>
+    <p> Details to come</p>
+    </section>
+  </div>
+
+<!-- Another grid under the events one with more info-->
+  <div class="extras-grid">
+  <section class="extras event">
+  <h2>Extra stuff here</h2>
+  </section>
+
+
+  <section class="extras event">
+  <h2>More extra stuff here</h2>
+  </section>
+
+
+  <section class="extras event">
+  <h2>Even more extra stuff here</h2>
+  </section>
+  </div>
+</main>
+
+
+<script>
+// toggle button and navigation// 
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true'
+    navToggle.setAttribute('aria-expanded', !isExpanded)
+    navMenu.classList.toggle('show');
+});
+
+// connect event section so can set up color change//
+  
+const section1 = document.querySelector('.section1');
+let colorChanged = false;
+
+// finds the key pressed and changes color//
+document.addEventListener('keydown', (event)=> {
+  if (event.key.toLowerCase() === 'c') {
+    section1.style.backgroundColor = colorChanged ? 'pink' : 'lightgreen';
+    colorChanged = !colorChanged;
+  }
+});
+</script> 
+</body>
+</html>
+

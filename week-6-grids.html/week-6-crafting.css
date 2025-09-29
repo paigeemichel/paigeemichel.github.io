@@ -1,0 +1,133 @@
+
+
+/* visuals for navigation bar*/
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightpink;
+    border: 2px solid yellow;
+    padding:  20px;
+  }
+
+  .nav-menu-visible {
+    display: flex;
+
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    background:none;
+  }
+
+  .nav-brand {
+    flex-grow: 1;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+
+    flex: 1;
+  }
+
+  .nav-menu li {
+    list-style:none;
+    border: 2px solid yellow;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    flex: 1;
+  }
+
+  .nav-menu li a {
+    color: green;
+    transition-duration: 0.2s;
+  }
+
+  .main-nav a:hover {
+    background-color: white;
+    color: yellow;
+  }
+
+  .main-nav .active {
+    background-color: #4CAF50;
+    color: pink;
+  }
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: lightpink;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+  }
+  .event-grid {
+    grid-template-columns:1fr;
+    grid-template-areas:
+        "section1"
+        "section2"
+        "section3";
+  }
+
+  .extras-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.event {
+    background: pink;
+    margin: 16px;
+    padding: 16px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 20px;
+    grid-template-areas:
+        "section1 section2 section3";
+}
+
+.event h2 {
+    text-align: center
+}
+
+.section1 {
+    grid-area: section1;
+}
+
+.section2
+{
+    grid-area: section2;
+} 
+
+.section3 {
+    grid-area: section3;
+}
+.extras {
+    background: lightpink;
+    border: 2px solid yellow;
+    padding: 16px;
+    text-align: center;
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin:20px;
+    width: 100%;
+}
+
