@@ -16,3 +16,11 @@ filterButtons.forEach(button => {
         filterPhotos(category);
     });
 });
+
+const small_text = document.querySelector ('#small-text');
+const medium_text = document.querySelector ('#medium-text');
+const large_text = document.querySelector ('#large-text');
+const clear_text_preferences = document.querySelector ('#clear=preferences');
+
+
+
