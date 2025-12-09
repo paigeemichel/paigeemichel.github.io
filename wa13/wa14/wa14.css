@@ -1,0 +1,87 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.banner {
+    background-color: lightpink;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /*banner behind words*/
+}
+
+/* title spacing */
+h1 {
+    margin-top: 40px;
+}
+
+/* buttons appearing under name/title */
+.board-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color:  pink;
+    border-radius: 10px;
+}
+
+/* LinkedIn link */
+.tiny-link {
+    display: block;
+    margin-top: 20px;
+    color: pink;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+/* the box of cards */
+/*.card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;   
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+}*/
+
+/*cards */
+/* .card {
+    background-color: pink;     
+    height: 250px;              
+    border-radius: 10px;         /* round corners 
+    padding: 10px;
+    flex-shrink: 0;              /* make cards not shrink */ /*
+    font-size: 20px;       
+    align-items: center;
+} */
+
+/* pop-up */
+#breakPopUp {
+    position: fixed;             /* stays in same place even if scrolling */
+    top: 50%;                    
+    left: 50%;                   
+    transform: translate(-50%, -50%);  
+    background-color: rgb(254, 254, 168);
+    border: 2px solid rgb(73, 73, 73);
+    padding: 20px;
+    font-size: 24px;
+    width: 250px;
+    text-align: center;
+    z-index: 1000;               /* position: appears above everything */
+    border-radius: 10px;
+}
+
+/* make popup hide until JS decides */
+.hide {
+    display: none;
+}
+
+
